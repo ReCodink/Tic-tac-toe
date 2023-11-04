@@ -1,0 +1,67 @@
+.square {
+  width: 35px;
+  height: 35px;
+  border: 2px solid #333;
+  background-color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+  border-radius: 10px; /* Tambahkan border-radius untuk sudut yang lebih lembut */
+}
+
+.square:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.1);
+}
+
+.square.x {
+  background-color: #3498db; /* Warna biru untuk pemain X */
+  color: #fff;
+}
+
+.square.o {
+  background-color: #e74c3c; /* Warna merah untuk pemain O */
+  color: #fff;
+}
+
+/* Menambahkan warna oranye dan biru */
+.square.orange {
+  background-color: #ff6600; /* Warna oranye */
+  color: #fff;
+}
+
+.square.cyan {
+  background-color: #00ffff; /* Warna cyan */
+  color: #fff;
+}
+
+.board {
+  display: grid; /* Mengganti flexbox menjadi grid untuk lebih fleksibilitas */
+  grid-template-columns: repeat(3, 1fr); /* Membuat 3 kolom */
+  grid-gap: 5px; /* Jarak antar kotak */
+  width: 105px;
+  height: 105px;
+  justify-content: center;
+  align-items: center;
+  background-color: #00008b; /* Warna biru gelap sebagai latar belakang papan */
+  border-radius: 10px; /* Tambahkan border-radius untuk sudut yang lebih lembut */
+}
+
+.status {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #333; /* Warna teks status */
+}
+
+.game {
+  display: flex;
+  flex-direction: column; /* Layout vertikal untuk elemen permainan */
+  align-items: center;
+  justify-content: center;
+}
+
